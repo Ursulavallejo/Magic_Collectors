@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/citiesStyle.css" />
+    <link rel="stylesheet" href="styles/generalStyles.css" />
+    <title>Cities API</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header class="p-4 my-3 rounded-3 container">
+      <h1 class="display-5 fw-bold">Cities of Sweden</h1>
+      <p class="col-md8 lead fw-bold">
+        Feel free to Find, Update , Create and Delete a city on our list!
+      </p>
+      <button id="btnBack" class="btn btn-dark btn-md" type="button">
+        GO Back
+      </button>
+    </header>
+
+    <main>
+      <!-- GET ALL CITIES -->
+      <section class="AllCities">
+        <div class="container rounded-3 colorBckg">
+          <div
+            class="row justify-content-center align-items-center gx-4 equal-cols"
+          >
+            <div class="col-sm-12 col-m-6 col-lg-5">
+              <div id="cities" class="p-3 border bg-light text-center rounded">
+                <!-- city name goes here -->
+              </div>
+            </div>
+            <div class="col-sm-12 col-m-6 col-lg-4">
+              <div
+                id="citiesInfo"
+                class="p-4 border bg-light text-center rounded"
+              >
+                <!-- city info goes here -->
+              </div>
+            </div>
+            <div class="col-sm-12 col-m-1 col-lg-1 btnContainer">
+              <input
+                id="updateButton"
+                class="btn btn-info styleBtn"
+                type="button"
+                value="update Info"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Create a City -->
+
+      <section class="sectionStyle">
+        <div class="container p-5 my-2 rounded-3 bg-light">
+          <div class="row justify-content-around align-items-center">
+            <div class="col-sm-6 col-6 col-lg-5"><h1>Create a city</h1></div>
+            <div class="col-sm-6 col-6 col-lg-7">
+              <input
+                id="postName"
+                type="text"
+                placeholder="Name of the city: "
+              />
+              <input
+                id="postPopulation"
+                type="text"
+                placeholder="Population number: "
+              />
+              <input
+                id="btnPost"
+                class="btn btn-info styleBtn"
+                type="button"
+                value="Create City"
+              />
+              <div id="postResult"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Search a City -->
+
+      <section class="sectionStyle">
+        <div class="container p-5 my-2 rounded-3 bg-light">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-sm-5 col-4 col-lg-6"><h1>Search a city</h1></div>
+            <div class="col-sm-7 col-6 col-lg-5">
+              <input id="searchCity" type="text" placeholder="Search a city:" />
+              <input
+                id="btnSearch"
+                class="btn btn-info styleBtn"
+                type="button"
+                value="Search"
+              />
+              <div id="searchResult"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Update a City PUT : needs mandatory to change the name of the city -->
+      <section class="sectionStyle">
+        <div class="container p-5 my-2 rounded-3 bg-light">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-sm-6 col-3 col-lg-5">
+              <h1>Update a city</h1>
+              <p>
+                You need to use the Id of the City. Use the search field to find
+                it!
+              </p>
+            </div>
+            <div class="col-sm-6 col-8 col-lg-7">
+              <input
+                id="cityId"
+                type="text"
+                placeholder="Write the city ID: "
+              />
+              <input
+                id="newName"
+                type="text"
+                placeholder="New name of the city: "
+              />
+              <input
+                id="newPopulation"
+                type="text"
+                placeholder="New population number: "
+              />
+              <input
+                id="btnPut"
+                class="btn btn-info styleBtn"
+                type="button"
+                value="Update"
+              />
+              <div id="putResult"></div>
+            </div>
+            <em
+              >You can need to add a value on both city name and population
+              fields. (Update With Put)
+            </em>
+          </div>
+        </div>
+      </section>
+
+      <!-- Update a City /PATCH : city or population can be changed. Not mandatory name.-->
+      <section class="sectionStyle">
+        <div class="container p-5 my-2 rounded-3 bg-light">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-sm-6 col-3 col-lg-5">
+              <h1>Update a city or population</h1>
+              <p>
+                You need to use the Id of the City. Use the search field to find
+                it!
+              </p>
+            </div>
+            <div class="col-sm-6 col-8 col-lg-7">
+              <input
+                id="cityIdPatch"
+                type="text"
+                placeholder="Write the city ID: "
+              />
+              <input
+                id="newNamePatch"
+                type="text"
+                placeholder="New name of the city: "
+              />
+              <input
+                id="newPopulationPatch"
+                type="text"
+                placeholder="New population number: "
+              />
+              <input
+                id="btnPatch"
+                class="btn btn-info styleBtn"
+                type="button"
+                value="Update"
+              />
+              <div id="patchResult"></div>
+            </div>
+          </div>
+          <em
+            >You can change the value of both fields. Name and / or population.
+            (Update With Patch)</em
+          >
+        </div>
+      </section>
+
+      <!-- Delete a City -->
+
+      <section class="sectionStyle">
+        <div class="container p-5 my-2 rounded-3 bg-light">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-sm-5 col-6 col-lg-7">
+              <h1>Delete a city</h1>
+              <p>Use the search field to find the ID!</p>
+            </div>
+            <div class="col-sm-7 col-4 col-lg-5">
+              <input
+                id="deleteCity"
+                type="text"
+                placeholder="ID city to delete:"
+              />
+              <input
+                id="btnDelete"
+                class="btn btn-info styleBtn"
+                type="button"
+                value="Delete"
+              />
+              <div id="deleteResult"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/CRUD_Cities/btnCities.js"></script>
+    <script src="js/CRUD_Cities/getAllCities.js"></script>
+    <script src="js/CRUD_Cities/getCityByName.js"></script>
+    <script src="js/CRUD_Cities/postCity.js"></script>
+  </body>
+  <script src="js/CRUD_Cities/putCity.js"></script>
+  <script src="js/CRUD_Cities/deleteCity.js"></script>
+  <script src="js/CRUD_Cities/patchCityPopulation.js"></script>
+</html>

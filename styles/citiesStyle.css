@@ -1,0 +1,97 @@
+.hero {
+  background-color: aqua;
+}
+
+header {
+  background-image: url(../assets/images/cities.jpg);
+  background-position: center;
+}
+
+body {
+  padding-bottom: 2.5em;
+}
+
+.AllCities {
+  color: rgb(65, 25, 103);
+}
+
+.AllCities p {
+  font-size: clamp(10px, 5vw, 16px);
+}
+
+.styleBtn {
+  color: #141414;
+  text-transform: uppercase;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+}
+
+.equal-cols {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  min-height: 500px;
+  gap: 0.5rem;
+}
+
+.colorBckg {
+  background-color: rgba(65, 25, 103, 0.8);
+  padding: 1em;
+}
+.btnContainer .styleBtn {
+  margin-top: 1em;
+  margin-left: 40%;
+}
+main .sectionStyle input {
+  width: 100%;
+}
+
+/* small devices */
+@media screen and (max-width: 415px) {
+  header h1 {
+    padding-top: 1.5em;
+  }
+  #btnBack {
+    font-size: 12px;
+    padding: 0.5em 1em;
+    margin-top: 2.2rem;
+  }
+
+  .btnContainer input {
+    margin-top: 0.5rem;
+    margin-left: 30%;
+  }
+  main .sectionStyle div,
+  main .sectionStyle {
+    display: block !important;
+  }
+  main .sectionStyle h1,
+  main .sectionStyle p {
+    width: 80vw;
+  }
+  main .styleBtn {
+    margin-top: 1rem;
+  }
+}
+
+/* medium devices */
+@media screen and (min-width: 768px) {
+  header {
+    background-image: url(../assets/images/cities3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+/* large devices */
+@media screen and (min-width: 1120px) {
+  main .sectionStyle input {
+    width: unset;
+  }
+  header {
+    background-image: url(../assets/images/cities3.png);
+    background-position: center;
+    background-repeat: repeat-x;
+  }
+}

@@ -1,6 +1,6 @@
 ### November 2023
 
-# [Demo Project-ITHögskola ](http://studentiths.se/ursula-vallejo)
+# [Demo Project-ITHögskola ](https://magic-collectors.netlify.app/home.html)
 
 ## Project realized by Ursula Vallejo Janne for the Course Native JS.
 

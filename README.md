@@ -5,12 +5,15 @@
 A Magic: The Gathering–inspired web application built entirely with HTML, CSS, and vanilla JavaScript. Upon loading, users see a login form on `home.html`—their name is validated and stored in `localStorage`, and a random flavor quote is fetched via Axios. Once logged in, they navigate to `mainChart.html`, where the app:
 
 - Fetches a full set of card data from the public MTG API using the Fetch API.
-- Randomly selects up to 12 cards and displays them as a responsive carousel powered by SwiperJS.
+- Randomly selects up to 12 cards and displays them as a responsive carousel powered by SwiperJS, and includes a “New Cards” button to reshuffle and load another random selection.
+- Builds a Chart.js visualization that compares selected cards’ power, toughness, and converted mana cost, dynamically updating once the 12 images are loaded.
 - Provides a search bar that filters card names (displaying up to three results) with a loader animation from Load Awesome.
 - Uses CSS Grid and Flexbox for a clean, mobile-first layout and Bootstrap utility classes for basic styling.
 - Implements a color palette defined in CSS custom properties (green, dark grays, cyan, orange, pink, etc.) with WCAG-compliant contrast ratios.
 
 Overall, the project demonstrates native JS techniques for form handling, API consumption, randomization (Fisher–Yates shuffle), conditional rendering (hiding/showing loaders and messages), and DOM updates—meeting course requirements for a fully functional, client-side application without any frameworks.
+
+Additionally, the project includes an extra “Cities” CRUD page—unrelated to cards—where users can create, read, update, and delete city records via Fetch to a mock endpoint. This satisfies a separate requirement for practicing RESTful operations.
 
 #### [Demo Project-ITHögskola ](https://magic-collectors.netlify.app/home.html)
 

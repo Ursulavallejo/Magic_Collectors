@@ -12,7 +12,7 @@ A Magic: The Gathering–inspired web application built entirely with HTML, CSS,
 
 Overall, the project demonstrates native JS techniques for form handling, API consumption, randomization (Fisher–Yates shuffle), conditional rendering (hiding/showing loaders and messages), and DOM updates—meeting course requirements for a fully functional, client-side application without any frameworks.
 
-# [Demo Project-ITHögskola ](https://magic-collectors.netlify.app/home.html)
+#### [Demo Project-ITHögskola ](https://magic-collectors.netlify.app/home.html)
 
 ---
 

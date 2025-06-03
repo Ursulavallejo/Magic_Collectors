@@ -73,6 +73,7 @@ Additionally, the project includes an extra “Cities” CRUD page—unrelated t
 />
 
 CRUD: Cities Api
+
 <img
   src="documentation/cities.png"
   alt="cities-page-image"

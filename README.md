@@ -15,6 +15,10 @@ Overall, the project demonstrates native JS techniques for form handling, API co
 
 Additionally, the project includes an extra “Cities” CRUD page—unrelated to cards—where users can create, read, update, and delete city records via Fetch to a mock endpoint. This satisfies a separate requirement for practicing RESTful operations.
 
+
+https://github.com/user-attachments/assets/19914761-c765-4ef9-a8a9-6abfcbbbebb4
+
+
 #### [Demo Project-ITHögskola ](https://magic-collectors.netlify.app/home.html)
 
 ---
